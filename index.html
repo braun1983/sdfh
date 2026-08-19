@@ -1,91 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/hero.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/about.css" />
+    <link rel="stylesheet" href="/assets/css/discography.css" />
+  </head>
 
-  <link rel="stylesheet" href="/assets/css/global.css">
-  <link rel="stylesheet" href="/assets/css/hero.css">
-  <link rel="stylesheet" href="/assets/css/header.css">
-  <link rel="stylesheet" href="/assets/css/about.css">
-</head>
+  <body>
+    <header class="header">
+      <section class="header_title">Skydiving from hell</section>
+      <nav class="navbar">
+        <ul class="navbar_list">
+          <li class="navbar_item">sobre</li>
+          <li class="navbar_item">home</li>
+          <li class="navbar_item">discografia</li>
+          <li class="navbar_item">galeria</li>
+          <li class="navbar_item">contato</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <!-- Marcações de canto -->
+        <span class="hero__corner hero__corner--top-left"></span>
+        <span class="hero__corner hero__corner--top-right"></span>
+        <span class="hero__corner hero__corner--bottom-left"></span>
+        <span class="hero__corner hero__corner--bottom-right"></span>
 
-<body>
-  <header class="header">
-    <section class="header_title">Skydiving from hell</section>
-    <nav class="navbar">
-      <ul class="navbar_list">
-        <li class="navbar_item">sobre</li>
-        <li class="navbar_item">home</li>
-        <li class="navbar_item">discografia</li>
-        <li class="navbar_item">galeria</li>
-        <li class="navbar_item">contato</li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main">
-    <section class="hero">
+        <div class="hero__content">
+          <!-- Logo -->
+          <div class="hero__logo-box">
+            <img
+              src="/assets/img/logo_branca.png"
+              alt="Skydiving From Hell"
+              class="hero__logo"
+            />
+          </div>
 
-      <!-- Marcações de canto -->
-      <span class="hero__corner hero__corner--top-left"></span>
-      <span class="hero__corner hero__corner--top-right"></span>
-      <span class="hero__corner hero__corner--bottom-left"></span>
-      <span class="hero__corner hero__corner--bottom-right"></span>
+          <!-- Título -->
+          <h1 class="hero__title">
+            <span class="hero__title-line">Vila Velha</span>
+            <span class="hero__title-line hero__title-line--accent">metal</span>
+          </h1>
 
-      <div class="hero__content">
-
-        <!-- Logo -->
-        <div class="hero__logo-box">
-          <img src="/assets/img/logo_branca.png" alt="Skydiving From Hell" class="hero__logo" />
+          <!-- CTA -->
+          <a href="#ouvir" class="hero__cta">
+            <svg
+              class="hero__cta-icon"
+              viewBox="0 0 24 24"
+              width="14"
+              height="14"
+              aria-hidden="true"
+            >
+              <path d="M8 5v14l11-7z" fill="currentColor" />
+            </svg>
+            <span>Ouça Agora</span>
+          </a>
         </div>
 
-        <!-- Título -->
-        <h1 class="hero__title">
-          <span class="hero__title-line">Vila Velha</span>
-          <span class="hero__title-line hero__title-line--accent">metal</span>
-        </h1>
-
-        <!-- CTA -->
-        <a href="#ouvir" class="hero__cta">
-          <svg class="hero__cta-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-            <path d="M8 5v14l11-7z" fill="currentColor" />
-          </svg>
-          <span>Ouça Agora</span>
-        </a>
-
-      </div>
-
-      <!-- Status do sistema (rodapé) -->
-      <div class="hero__status">
-        <p class="hero__status-line">SYS.STAT: <span class="hero__status-value">ONLINE</span></p>
-        <p class="hero__status-line">COORD: <span class="hero__status-value">-20.3297, -40.2925</span></p>
-      </div>
-
-    </section>
-    <section class="about">
-      <div class="about_title_container" >
-        <h2 class="about_title">System_bio</h2>
-      </div>
-
-      <div class="about_text_container">
-        <article>
-          <p>O <span>Skydiving From Hell</span> é um quinteto de Vila Velha (ES) que mistura metal moderno e hardcore com uma sonoridade técnica e pesada.</p>
-          <p>Nascidos na brutalidade da costa capixaba, a banda opera na intersecção do caos analógico e da precisão
-            digital. Não há espaço para o conforto; apenas frequências esmagadoras e ritmos matemáticos projetados para
-            desorientar e destruir.</p>
-        </article>
-        <div>
-          <p> metal</p><p> hardcore</p><p> metal</p>
+        <!-- Status do sistema (rodapé) -->
+        <div class="hero__status">
+          <p class="hero__status-line">
+            SYS.STAT: <span class="hero__status-value">ONLINE</span>
+          </p>
+          <p class="hero__status-line">
+            COORD: <span class="hero__status-value">-20.3297, -40.2925</span>
+          </p>
         </div>
-      </div>
+      </section>
+      <section class="about">
+        <div class="about_title_container">
+          <h2 class="about_title">System_bio</h2>
+        </div>
 
-    </section>
-  </main>
-  <footer class="footer">
-    <p>© 2024 Vila Velha Hardcore. Todos os direitos reservados.</p>
-  </footer>
-</body>
+        <div class="about_text_container">
+          <article>
+            <p>
+              O <span>Skydiving From Hell</span> é um quinteto de Vila Velha
+              (ES) que mistura metal moderno e hardcore com uma sonoridade
+              técnica e pesada.
+            </p>
+            <p>
+              Nascidos na brutalidade da costa capixaba, a banda opera na
+              intersecção do caos analógico e da precisão digital. Não há espaço
+              para o conforto; apenas frequências esmagadoras e ritmos
+              matemáticos projetados para desorientar e destruir.
+            </p>
+          </article>
+          <div class="about_text_hashtags">
+            <p>metal</p>
+            <p>hardcore</p>
+            <p>metal</p>
+          </div>
+        </div>
+      </section>
 
+      <section class="discography">
+        
+        <div class="discography_title"><h2>Discografia</h2></div>
+
+        <div class="discography_cards_container">
+          <div class="discography_card">
+            <div class="discography_miniature">
+              <iframe
+                width="320"
+                height="180"
+                src="https://www.youtube.com/embed/9ZuQmgSBIIw?si=2xrDQIkl8NAy8L0Y"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="discography_title">
+              <h3>Black Flag</h3>
+            </div>
+            <div class="discography_date">
+              <p>2019</p>
+            </div>
+          </div>
+          
+             <div class="discography_card">
+            <div class="discography_miniature">
+              <iframe width="320" height="180" src="https://www.youtube.com/embed/4W_7LYmnb2Q?si=3mt2syZHNraPwx3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="discography_title">
+              <h3>Indigente</h3>
+            </div>
+            <div class="discography_date">
+              <p>2019</p>
+            </div>
+          </div>
+             <div class="discography_card">
+            <div class="discography_miniature">
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/H-cQ3nuXFkU?si=9oqWNo7WtWhRsGnC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="discography_title">
+              <h3>Amethyst</h3>
+            </div>
+            <div class="discography_date">
+              <p>2018</p>
+            </div>
+          </div>
+             <div class="discography_card">
+            <div class="discography_miniature">
+              <iframe width="320" height="180" src="https://www.youtube.com/embed/6CyESpQ7cyg?si=Ad1NKnV5M4XCm_Cw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="discography_title">
+              <h3>Unpatriot</h3>
+            </div>
+            <div class="discography_date">
+              <p>2018</p>
+            </div>
+          </div>
+         
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>© 2024 Vila Velha Hardcore. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>

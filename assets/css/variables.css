@@ -1,34 +1,30 @@
-/* ==========================================================================
-   Skydiving From Hell — Official Landing Page
-   Design System: Obsidian Kinetic
-   variables.css
-   ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap");
 
 :root {
-
   /* ------------------------------------------------------------------------
      CORES / COLORS
      ------------------------------------------------------------------------ */
 
-  /* Primária */
-  --color-primary: #050505;          /* Obsidian Black */
---color-secondary: #0D0D0D;
---color-tertiary: #797676;        /* Obsidian Black - variação para hover/estados ativos */
+
+  --color-primary: #050505;
+  --color-secondary: #0d0d0d;
+  --color-tertiary: #797676;
+   --color-quartenary: #fff;
   /* Accent */
-  --color-accent: #B20000;           /* Blood Red */
-  --color-accent-hover: #E00000;     /* Blood Red - variação para hover/estados ativos */
+  --color-accent: #b20000;
+  --color-accent-hover: #e00000;
 
   /* Texto */
-  --color-text: #FFFFFF;             /* Pure White */
-  --color-text-muted: #A0A0A0;       /* Cinza para textos secundários / meta-data */
-  --color-text-glitch: #00FFF0;      /* Glitch Cyan - hover states */
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0a0;
+  --color-text-glitch: #00fff0;
 
   /* Superfícies / apoio (tons derivados do Obsidian Black para cards, borders, overlays) */
-  --color-surface: #0D0D0D;
+  --color-surface: #0d0d0d;
   --color-surface-alt: #121212;
-  --color-border: #1F1F1F;
+  --color-border: #1f1f1f;
 
   /* Overlay / backdrop-blur headers */
   --color-overlay: rgba(5, 5, 5, 0.75);
@@ -38,18 +34,17 @@
      ------------------------------------------------------------------------ */
 
   /* Headlines */
-  --font-heading: 'Anton', sans-serif;
+  --font-heading: "Anton", sans-serif;
 
   /* Meta-data / Labels (técnico) */
-  --font-mono: 'Space Mono', 'Roboto Mono', monospace;
+  --font-mono: "Space Mono", "Roboto Mono", monospace;
 
   /* Labels / UI técnica */
-  --font-label: 'Space Grotesk', sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
 
   /* Corpo de texto (fallback, caso haja copy corrida no Manifesto) */
-  --font-body: 'JetBrains Mono', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: "JetBrains Mono", "Helvetica Neue", Arial, sans-serif;
 
-  
   /* ------------------------------------------------------------------------
      EFEITOS / MOTION
      ------------------------------------------------------------------------ */
