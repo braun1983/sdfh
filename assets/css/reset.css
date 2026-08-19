@@ -1,0 +1,266 @@
+/* ==========================================================================
+   Skydiving From Hell — Official Landing Page
+   Design System: Obsidian Kinetic
+   reset.css
+
+   Reset moderno e completo. Carregar ANTES de variables.css e background.css:
+   <link rel="stylesheet" href="reset.css">
+   <link rel="stylesheet" href="variables.css">
+   <link rel="stylesheet" href="background.css">
+   ========================================================================== */
+
+/* ------------------------------------------------------------------------
+   1. Box-sizing universal
+   ------------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------
+   2. Reset de margin/padding em tudo
+   ------------------------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------------------------------------------
+   3. Documento base
+   ------------------------------------------------------------------------ */
+html {
+  /* evita ajuste automático de tamanho de fonte no rotate do mobile (iOS) */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* rolagem suave por padrão, mas respeita quem pediu menos animação (ver seção 13) */
+  scroll-behavior: smooth;
+  /* evita "pulo" de layout quando uma página passa a ter scrollbar */
+  scrollbar-gutter: stable;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden; /* trava scroll horizontal — importante com os transforms/skews do design */
+  background-color: var(--color-primary, #050505);
+  color: var(--color-text, #ffffff);
+}
+
+/* ------------------------------------------------------------------------
+   4. Mídia responsiva por padrão
+   ------------------------------------------------------------------------ */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------
+   5. Tipografia — evita overflow de palavras longas e herda fonte
+   ------------------------------------------------------------------------ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* remove estilo padrão de listas, mas mantém semântica pra leitores de tela */
+ul,
+ol {
+  list-style: none;
+}
+
+/* ------------------------------------------------------------------------
+   6. Links
+   ------------------------------------------------------------------------ */
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ------------------------------------------------------------------------
+   7. Formulários — herdam fonte e cor, e resetam aparência nativa
+   ------------------------------------------------------------------------ */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  background: none;
+  border: none;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* remove o "x" nativo de campos de busca no Chrome/Safari */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* remove as setas do input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* ------------------------------------------------------------------------
+   8. Tabelas
+   ------------------------------------------------------------------------ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------------
+   9. Elementos diversos
+   ------------------------------------------------------------------------ */
+fieldset {
+  border: none;
+}
+
+legend {
+  padding: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid currentColor;
+}
+
+address {
+  font-style: normal;
+}
+
+/* elementos ocultos continuam ocultos mesmo se algo tentar sobrescrever display */
+[hidden] {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------------------
+   10. Elementos interativos nativos (details/summary, dialog)
+   ------------------------------------------------------------------------ */
+summary {
+  cursor: pointer;
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+dialog {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* ------------------------------------------------------------------------
+   11. Root de apps (React/Vue/etc) empilha corretamente
+   ------------------------------------------------------------------------ */
+#root,
+#__next,
+#app {
+  isolation: isolate;
+}
+
+/* ------------------------------------------------------------------------
+   12. Foco e seleção de texto — usa o accent da marca
+   ------------------------------------------------------------------------ */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent, #B20000);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--color-accent, #B20000);
+  color: var(--color-text, #ffffff);
+}
+
+/* ------------------------------------------------------------------------
+   13. Acessibilidade — respeita quem prefere menos movimento
+   ------------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* classe utilitária para esconder visualmente mas manter acessível
+   (ex: labels de formulário só pra leitor de tela) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

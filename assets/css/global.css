@@ -1,3 +1,5 @@
+@import url('./variables.css');
+
 *,
 *::before,
 *::after {
@@ -20,3 +22,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+

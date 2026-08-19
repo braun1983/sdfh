@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Skydiving From Hell — Official Landing Page
+   Design System: Obsidian Kinetic
+   variables.css
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+
+  /* ------------------------------------------------------------------------
+     CORES / COLORS
+     ------------------------------------------------------------------------ */
+
+  /* Primária */
+  --color-primary: #050505;          /* Obsidian Black */
+--color-secondary: #0D0D0D;
+--color-tertiary: #797676;        /* Obsidian Black - variação para hover/estados ativos */
+  /* Accent */
+  --color-accent: #B20000;           /* Blood Red */
+  --color-accent-hover: #E00000;     /* Blood Red - variação para hover/estados ativos */
+
+  /* Texto */
+  --color-text: #FFFFFF;             /* Pure White */
+  --color-text-muted: #A0A0A0;       /* Cinza para textos secundários / meta-data */
+  --color-text-glitch: #00FFF0;      /* Glitch Cyan - hover states */
+
+  /* Superfícies / apoio (tons derivados do Obsidian Black para cards, borders, overlays) */
+  --color-surface: #0D0D0D;
+  --color-surface-alt: #121212;
+  --color-border: #1F1F1F;
+
+  /* Overlay / backdrop-blur headers */
+  --color-overlay: rgba(5, 5, 5, 0.75);
+
+  /* ------------------------------------------------------------------------
+     TIPOGRAFIA / TYPOGRAPHY
+     ------------------------------------------------------------------------ */
+
+  /* Headlines */
+  --font-heading: 'Anton', sans-serif;
+
+  /* Meta-data / Labels (técnico) */
+  --font-mono: 'Space Mono', 'Roboto Mono', monospace;
+
+  /* Labels / UI técnica */
+  --font-label: 'Space Grotesk', sans-serif;
+
+  /* Corpo de texto (fallback, caso haja copy corrida no Manifesto) */
+  --font-body: 'JetBrains Mono', 'Helvetica Neue', Arial, sans-serif;
+
+  
+  /* ------------------------------------------------------------------------
+     EFEITOS / MOTION
+     ------------------------------------------------------------------------ */
+
+  --transition-fast: 0.15s ease-out;
+  --transition-base: 0.3s ease-out;
+  --skew-angle: -8deg;
+
+  --blur-backdrop: 12px;
+
+  /* ------------------------------------------------------------------------
+     BREAKPOINTS (referência via custom media / uso manual em @media)
+     ------------------------------------------------------------------------ */
+
+  --bp-mobile: 390px;
+  --bp-desktop: 1440px;
+}

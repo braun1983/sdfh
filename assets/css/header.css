@@ -1,0 +1,37 @@
+@import url("./variables.css");
+
+.header {
+  background-color: var(--color-secondary);
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_title {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-left: 16px;
+  letter-spacing: 3px;
+}
+
+.navbar {
+    margin-right: 25%;
+}
+.navbar_list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  
+}
+
+.navbar_item {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  color: var(--color-text);
+  letter-spacing: 1px;
+
+}

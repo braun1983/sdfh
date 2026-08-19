@@ -1,8 +1,6 @@
-/* ==========================================================================
-   Variáveis (adicione ao seu variables.css se ainda não existirem)
-   ========================================================================== */
+@import url("./variables.css");
 :root {
-  --hero-bg: #050505;
+  
   --hero-line-color: #797676;
   --hero-line-opacity: 0.25;   /* intensidade das linhas verticais */
   --hero-line-gap: 60px;       /* espaçamento entre as linhas */
@@ -14,13 +12,13 @@
    ========================================================================== */
 .hero {
   position: relative;
-  background-color: var(--hero-bg);
+  background-color: var(--color-primary);
 
   /* Linhas verticais finas */
   background-image: repeating-linear-gradient(
     to right,
-    color-mix(in srgb, var(--hero-line-color) calc(var(--hero-line-opacity) * 100%), transparent) 0px,
-    color-mix(in srgb, var(--hero-line-color) calc(var(--hero-line-opacity) * 100%), transparent) 1px,
+    color-mix(in srgb, var(--color-tertiary) calc(var(--hero-line-opacity) * 100%), transparent) 0px,
+    color-mix(in srgb, var(--color-tertiary) calc(var(--hero-line-opacity) * 100%), transparent) 1px,
     transparent 1px,
     transparent var(--hero-line-gap)
   );
@@ -111,14 +109,14 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 24px;
   text-align: center;
 }
 
 /* Caixa da logo */
 .hero__logo-box {
-  border: 1px solid color-mix(in srgb, var(--hero-line-color) 40%, transparent);
+  
   background: rgba(0, 0, 0, 0.3);
   padding: 24px 48px;
   max-width: 520px;
