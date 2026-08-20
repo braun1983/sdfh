@@ -101,7 +101,7 @@
 .navbar_item a:hover,
 .navbar_item a:active {
   color: var(--color-accent);
-  background-color: rgba(255, 255, 255, 0.05);
+  
   text-decoration: underline;
 }
 
