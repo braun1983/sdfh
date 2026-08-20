@@ -72,6 +72,7 @@
 
 .navbar.is-open {
   max-height: 300px; 
+}
 
 .navbar_list {
   display: flex;
@@ -94,7 +95,7 @@
   text-decoration: none;
   transition: color 0.3s ease;
   display: block;
-  padding: 14px 20px; 
+  padding: 14px 20px;
 }
 
 .navbar_item a:hover,
