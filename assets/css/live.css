@@ -150,5 +150,6 @@
   .btn-ingresso {
     padding: 8px 18px;
     width: auto;
+    margin-right: 5px;
   }
 }
