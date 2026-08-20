@@ -2,7 +2,7 @@ async function carregarShows() {
     const container = document.getElementById("show-list");
 
     try {
-        const response = await fetch("/assets/data/shows.json");
+        const response = await fetch("assets/data/shows.json");
         if (!response.ok) throw new Error(`Erro ao buscar os shows: ${response.status}`); {
 
             const shows = await response.json();
