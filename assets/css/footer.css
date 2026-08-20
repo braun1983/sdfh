@@ -1,0 +1,119 @@
+@import url("./variables.css");
+
+/* ===== BASE (mobile-first) ===== */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-secondary);
+}
+
+.footer_container {
+  flex: 0 0 100%;
+  border-top: 2px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 15dvh;
+  padding: 20px 12px;
+  gap: 12px;
+}
+
+.copyright,
+.socialmedia {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.copyright {
+  color: var(--color-accent);
+  font-family: var(--font-label);
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.socialmedia {
+  margin: 0;
+}
+
+.socialmedia ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 8px 16px;
+}
+
+.socialmedia li {
+  margin: 0;
+}
+
+.socialmedia a {
+  font-family: var(--font-label);
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: var(--color-tertiary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 4px 2px; /* aumenta um pouco a área de toque */
+}
+
+.socialmedia a:hover {
+  color: var(--color-accent-hover);
+}
+
+.developer_container {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+}
+
+/* ===== TABLET/DESKTOP (>= 640px): layout original lado a lado ===== */
+@media (min-width: 640px) {
+  .footer_container {
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+  }
+
+  .copyright,
+  .socialmedia {
+    flex: 0 0 50%;
+    width: auto;
+  }
+
+  .copyright {
+    text-align: left;
+    margin: auto 12px;
+    font-size: 1rem;
+  }
+
+  .socialmedia {
+    margin: 20px auto 0 auto;
+  }
+
+  .socialmedia ul {
+    gap: 0;
+  }
+
+  .socialmedia li {
+    margin: 0 16px;
+  }
+
+  .socialmedia a {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .developer_container {
+    padding: 8px 0;
+    font-size: 1rem;
+  }
+}

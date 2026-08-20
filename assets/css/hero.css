@@ -7,9 +7,7 @@
   --hero-noise-opacity: 0.05;  /* intensidade do grão/ruído */
 }
 
-/* ==========================================================================
-   Background da Hero
-   ========================================================================== */
+
 .hero {
   position: relative;
   background-color: var(--color-primary);
@@ -40,7 +38,7 @@
   mix-blend-mode: overlay;
 }
 
-/* Vinheta leve escurecendo as bordas, dando profundidade ao centro */
+
 .hero::after {
   content: "";
   position: absolute;
@@ -54,15 +52,13 @@
   );
 }
 
-/* Garante que o conteúdo da Hero fique acima das camadas de textura */
+
 .hero > * {
   position: relative;
   z-index: 1;
 }
 
-/* ==========================================================================
-   Detalhes de cantos (opcional, como na referência)
-   ========================================================================== */
+
 .hero__corner {
   position: absolute;
   width: 24px;
@@ -100,9 +96,6 @@
   border-top: none;
 }
 
-/* ==========================================================================
-   Conteúdo central
-   ========================================================================== */
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -128,7 +121,7 @@
   display: block;
 }
 
-/* Título */
+
 .hero__title {
   display: flex;
   flex-direction: column;
@@ -148,7 +141,6 @@
   color: var(--color-accent, #c81e1e);
 }
 
-/* CTA */
 .hero__cta {
   display: inline-flex;
   align-items: center;
@@ -178,7 +170,7 @@
   flex-shrink: 0;
 }
 
-/* Status do sistema */
+
 .hero__status {
   position: absolute;
   bottom: 20px;
@@ -199,20 +191,32 @@
   color: #2ee6a8;
 }
 
-/* ==========================================================================
-   Responsivo
-   ========================================================================== */
-@media (max-width: 640px) {
-  .hero__logo-box {
-    padding: 16px 24px;
-  }
-
+@media (max-width: 360px) {
   .hero__title-line {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.6rem, 9vw, 2rem);
   }
 
   .hero__status {
-    left: 16px;
-    bottom: 16px;
+    font-size: 0.6rem;
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .hero__logo-box {
+    padding: 10px 16px;
+    max-width: 260px;
+  }
+}
+
+/* ===== CELULAR DEITADO (landscape) — comum ao assistir vídeo/mostrar pra alguém ===== */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero__content {
+    min-height: auto;
+    padding: 40px 24px;
+    gap: 16px;
+  }
+
+  .hero__status {
+    display: none; /* some com o rodapé técnico, não cabe */
   }
 }

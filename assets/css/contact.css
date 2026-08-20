@@ -1,0 +1,107 @@
+@import url("./variables.css");
+
+.contact {
+  background-color: var(--color-primary);
+  border-top: 2px solid var(--color-border);
+  padding: 5% 0;
+}
+
+.contact_title h2 {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+.contact_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* ---------- Info ---------- */
+
+.contact_info {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact_info-label {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.contact_info-value {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  font-size: 1.1rem;
+}
+
+/* ---------- Botão WhatsApp ---------- */
+
+.contact_action {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-overlay);
+  border: 2px solid var(--color-tertiary);
+  border-radius: 2px;
+  padding: 14px 28px;
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent-hover);
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp_icon {
+  flex-shrink: 0;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+  .contact_container {
+    flex-direction: column;
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .contact_info,
+  .contact_action {
+    flex: 0 0 100%;
+  }
+
+  .contact_action {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .contact_title h2 {
+    margin-left: 20px;
+  }
+}

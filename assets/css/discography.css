@@ -1,59 +1,121 @@
 @import url("./variables.css");
 
+/* ===== BASE (mobile-first) ===== */
 .discography {
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3% 0 3% 0;
-  
-  
+  padding: 10% 0;
 }
 
-
-
-.discography h2 {
+.discography_title h2,
+.discography > h2 {
   color: var(--color-text);
   font-family: var(--font-heading);
   text-transform: uppercase;
-  font-size: 2rem;
-  letter-spacing: 3px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   display: inline-block;
-  margin-left:100px  
+  margin-left: 20px;
+  margin-bottom: 12px;
 }
 
-.discography_cards_container{
-    display: flex;
+.discography_cards_container {
+  display: flex;
+  gap: 14px;
+  margin: 12px 0;
+  padding: 0 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+.discography_cards_container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.discography_cards_container::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.discography_card {
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  color: var(--color-text);
+  flex: 0 0 82%;
+  scroll-snap-align: start;
+}
+
+/* iframe responsivo: ignora width/height fixos do HTML */
+.discography_miniature {
+  padding: 6px;
+  width: 100%;
+}
+
+.discography_miniature iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+.discography_title {
+  font-family: var(--font-label);
+  letter-spacing: 2px;
+  margin: 6px;
+  font-size: 0.95rem;
+}
+
+.discography_date {
+  font-family: var(--font-body);
+  border-top: 1px solid var(--color-tertiary);
+  margin: 6px;
+  padding: 6px;
+  font-size: 0.85rem;
+}
+
+/* ===== TABLET (>= 600px): 2 por vez, ainda com scroll ===== */
+@media (min-width: 600px) {
+  .discography_card {
+    flex: 0 0 46%;
+  }
+
+  .discography_title h2,
+  .discography > h2 {
+    margin-left: 40px;
+    font-size: 1.75rem;
+  }
+
+  .discography_cards_container {
+    padding: 0 40px;
+  }
+}
+
+/* ===== DESKTOP (>= 900px): layout original, tudo lado a lado, sem scroll ===== */
+@media (min-width: 900px) {
+  .discography_title h2,
+  .discography > h2 {
+    margin-left: 100px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .discography_cards_container {
     justify-content: space-around;
+    overflow-x: visible;
+    scroll-snap-type: none;
     margin: 20px;
-    
+    padding: 0;
+  }
 
+  .discography_card {
+    flex: 0 1 auto;
+  }
 }
-
-.discography_miniature{
-
-    padding: 6px;
-}
-
-.discography_card{
-    background-color: var(--color-secondary);
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    color: var(--color-text);    
-}
-
-.discography_title{
-    font-family: var(--font-label);
-    letter-spacing: 2px;
-    margin: 6px;
-}
-
-.discography_date{
-    font-family: var(--font-body);
-    border-top: 1px solid var(--color-tertiary);
-    margin: 6px;
-    padding: 6px;
-}
-
-
