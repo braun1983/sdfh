@@ -55,7 +55,7 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Menu (fechado por padrão no mobile) */
+
 .navbar {
   margin-right: 0;
   position: absolute;
@@ -71,8 +71,7 @@
 }
 
 .navbar.is-open {
-  max-height: 300px; /* altura suficiente pra caber os 5 itens */
-}
+  max-height: 300px; 
 
 .navbar_list {
   display: flex;
@@ -95,13 +94,12 @@
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
   display: block;
-  padding: 14px 20px; /* área de toque confortável */
+  padding: 14px 20px; 
 }
 
 .navbar_item a:hover,
 .navbar_item a:active {
   color: var(--color-accent);
-  
   text-decoration: underline;
 }
 
