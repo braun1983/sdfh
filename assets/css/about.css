@@ -3,7 +3,7 @@
   background-color: var(--color-secondary);
   display: flex;
   justify-content: center;
-  padding: 3% 0 3% 0;
+  padding: 3% 3% 3% 3%;
   
 }
 
@@ -73,7 +73,7 @@ margin-left: 16px;
 .about_text_hashtags p{
     background-color:  var(--color-quartenary);
     padding: 4px 6px;
-    margin: 0 6px 10px 6px;
+    margin: 0 6px 20px 12px;
     font-size: 0.9rem;
     height: 700;
     text-transform: uppercase ;
