@@ -9,7 +9,7 @@
 
 
   --color-primary: #050505;
-  --color-secondary: #0d0d0d;
+  --color-secondary: #121212;
   --color-tertiary: #797676;
    --color-quartenary: #fff;
   /* Accent */
@@ -23,7 +23,7 @@
 
   /* Superfícies / apoio (tons derivados do Obsidian Black para cards, borders, overlays) */
   --color-surface: #0d0d0d;
-  --color-surface-alt: #121212;
+  
   --color-border: #1f1f1f;
 
   /* Overlay / backdrop-blur headers */

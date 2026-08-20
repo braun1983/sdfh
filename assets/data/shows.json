@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sdfh-001",
+    "data": "2026-09-12",
+    "cidade": "Vila Velha - ES",
+    "local": "Espaço Cultural XYZ",
+    "status": "confirmado",
+    "ingressoUrl": "https://exemplo.com/ingressos/001"
+  },
+  {
+    "id": "sdfh-002",
+    "data": "2026-10-03",
+    "cidade": "São Paulo - SP",
+    "local": "Casa de Shows ABC",
+    "status": "em breve",
+    "ingressoUrl": null
+  }
+]

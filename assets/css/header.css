@@ -28,10 +28,17 @@
   
 }
 
-.navbar_item {
+.navbar_item a {
   font-family: var(--font-label);
   text-transform: uppercase;
   color: var(--color-text);
   letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
+.navbar_item a:hover {
+  color: var(--color-accent);
+  transition: color 0.3s ease;
+  text-decoration: underline;
 }

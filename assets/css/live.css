@@ -1,0 +1,90 @@
+@import url("./variables.css");
+
+.lives {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3% 0 3% 0;
+  margin-top: 2px solid var(--color-border);
+}
+
+.lives_title h2 {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.show-card {
+  background-color: var(--color-secondary);
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px auto;
+  border-radius: 2px;
+  border: 2px solid var(--color-border);
+}
+
+.show-data {
+  color: var(--color-accent);
+  font-family: var(--font-label);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.show-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.show-local {
+  color: var(--color-text);
+
+  font-size: 1.2rem;
+}
+
+.show-cidade {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.btn-ingresso{
+    background-color: var(--color-overlay);
+    border: 2px solid var(--color-tertiary);
+    border-radius: 2px;
+    padding: 8px 18px;
+    color: var(--color-text);
+    font-family: var(--font-label);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-ingresso:hover{
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-accent-hover);
+    color: var(--color-text);
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
+.show-status-tag{
+  
+    color: var(--color-accent);
+    font-family: var(--font-label);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 2px;
+    margin-right: 6px;
+}
