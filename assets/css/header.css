@@ -92,7 +92,7 @@
   color: var(--color-text);
   letter-spacing: 1px;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease;
   display: block;
   padding: 14px 20px; 
 }
