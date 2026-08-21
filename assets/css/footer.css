@@ -70,9 +70,53 @@
 
 .developer_container {
   flex: 0 0 100%;
-  text-align: center;
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.dev_name {
+  font-family: var(--font-body);
   font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.dev_name span {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-family: var(--font-label);
+}
+
+.dev_github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dev_github i {
+  font-size: 1rem;
+}
+
+.dev_github:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  background-color: var(--color-overlay);
+}
+
+.dev_github:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 /* ===== TABLET/DESKTOP (>= 640px): layout original lado a lado ===== */
