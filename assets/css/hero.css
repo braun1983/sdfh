@@ -41,44 +41,53 @@
   left: var(--x, 50%);
   width: var(--size, 4px);
   height: var(--size, 4px);
-  background-color: #6a6a6a; /* cinza mais definido, independente do token */
-  border-radius: 50%;
+  background-color: var(--particle-color, #6a6a6a);
+  border-radius: var(--shape, 50%);
   opacity: 0;
-  filter: blur(0.5px);
+  filter: blur(var(--blur, 0.5px));
   animation: soot-rise var(--dur, 12s) linear infinite;
   animation-delay: var(--delay, 0s);
 }
 
+.soot-particle--ember {
+  background-color: var(--particle-color, #b23a1e);
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--particle-color, #b23a1e) 60%, transparent);
+}
+
 /* Variação individual de cada partícula */
-.soot-particle:nth-child(1)  { --x: 5%;  --size: 3px; --dur: 14s; --delay: 0s;  --drift: 30px; }
-.soot-particle:nth-child(2)  { --x: 15%; --size: 2px; --dur: 10s; --delay: 2s;  --drift: -20px; }
-.soot-particle:nth-child(3)  { --x: 25%; --size: 4px; --dur: 16s; --delay: 4s;  --drift: 40px; }
-.soot-particle:nth-child(4)  { --x: 38%; --size: 2px; --dur: 11s; --delay: 1s;  --drift: -35px; }
-.soot-particle:nth-child(5)  { --x: 50%; --size: 3px; --dur: 13s; --delay: 5s;  --drift: 25px; }
-.soot-particle:nth-child(6)  { --x: 62%; --size: 5px; --dur: 15s; --delay: 3s;  --drift: -30px; }
-.soot-particle:nth-child(7)  { --x: 70%; --size: 2px; --dur: 9s;  --delay: 6s;  --drift: 20px; }
-.soot-particle:nth-child(8)  { --x: 80%; --size: 3px; --dur: 17s; --delay: 0.5s; --drift: -25px; }
-.soot-particle:nth-child(9)  { --x: 88%; --size: 4px; --dur: 12s; --delay: 4.5s; --drift: 35px; }
-.soot-particle:nth-child(10) { --x: 92%; --size: 2px; --dur: 10s; --delay: 2.5s; --drift: -15px; }
-.soot-particle:nth-child(11) { --x: 45%; --size: 3px; --dur: 18s; --delay: 7s;  --drift: 15px; }
-.soot-particle:nth-child(12) { --x: 10%; --size: 5px; --dur: 14s; --delay: 8s;  --drift: -40px; }
+.soot-particle:nth-child(1)  { --x: 5%;  --size: 3px; --dur: 14s; --delay: 0s;  --drift: 30px;  --shape: 40% 60% 55% 45% / 55% 45% 60% 40%; --blur: 0.6px; }
+.soot-particle:nth-child(2)  { --x: 15%; --size: 2px; --dur: 10s; --delay: 2s;  --drift: -20px; --shape: 60% 40% 45% 55% / 45% 55% 40% 60%; --blur: 0.3px; }
+.soot-particle:nth-child(3)  { --x: 25%; --size: 5px; --dur: 16s; --delay: 4s;  --drift: 40px;  --shape: 50% 50% 60% 40% / 40% 60% 50% 50%; --blur: 0.8px; }
+.soot-particle:nth-child(4)  { --x: 38%; --size: 2px; --dur: 11s; --delay: 1s;  --drift: -35px; --shape: 45% 55% 50% 50% / 60% 40% 55% 45%; --blur: 0.4px; }
+.soot-particle:nth-child(5)  { --x: 50%; --size: 3px; --dur: 13s; --delay: 5s;  --drift: 25px;  --shape: 55% 45% 40% 60% / 50% 50% 45% 55%; --blur: 0.5px; }
+.soot-particle:nth-child(6)  { --x: 62%; --size: 6px; --dur: 15s; --delay: 3s;  --drift: -30px; --shape: 40% 60% 50% 50% / 55% 45% 60% 40%; --blur: 0.9px; }
+.soot-particle:nth-child(7)  { --x: 70%; --size: 2px; --dur: 9s;  --delay: 6s;  --drift: 20px;  --shape: 50% 50% 55% 45% / 45% 55% 50% 50%; --blur: 0.3px; }
+.soot-particle:nth-child(8)  { --x: 80%; --size: 3px; --dur: 17s; --delay: 0.5s; --drift: -25px; --shape: 60% 40% 45% 55% / 50% 50% 40% 60%; --blur: 0.5px; }
+.soot-particle:nth-child(9)  { --x: 88%; --size: 5px; --dur: 12s; --delay: 4.5s; --drift: 35px;  --shape: 45% 55% 50% 50% / 55% 45% 50% 50%; --blur: 0.7px; }
+.soot-particle:nth-child(10) { --x: 92%; --size: 2px; --dur: 10s; --delay: 2.5s; --drift: -15px; --shape: 50% 50% 45% 55% / 40% 60% 55% 45%; --blur: 0.3px; }
+.soot-particle:nth-child(11) { --x: 45%; --size: 3px; --dur: 18s; --delay: 7s;  --drift: 15px;  --shape: 55% 45% 60% 40% / 50% 50% 45% 55%; --blur: 0.6px; }
+.soot-particle:nth-child(12) { --x: 10%; --size: 6px; --dur: 14s; --delay: 8s;  --drift: -40px; --shape: 40% 60% 45% 55% / 60% 40% 50% 50%; --blur: 0.9px; }
 
 @keyframes soot-rise {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(0deg);
     opacity: 0;
   }
-  10% {
-    opacity: 0.7;
+  8% {
+    opacity: 0.65;
   }
-  50% {
-    opacity: 0.4;
+  30% {
+    transform: translate(calc(var(--drift, 20px) * 0.4), -35vh) rotate(60deg);
+  }
+  55% {
+    opacity: 0.35;
+    transform: translate(calc(var(--drift, 20px) * -0.3), -60vh) rotate(140deg);
   }
   90% {
-    opacity: 0.1;
+    opacity: 0.12;
   }
   100% {
-    transform: translate(var(--drift, 20px), -110vh);
+    transform: translate(var(--drift, 20px), -110vh) rotate(220deg);
     opacity: 0;
   }
 }
