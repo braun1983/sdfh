@@ -42,6 +42,7 @@
   font-family: var(--font-label);
   font-size: 1.1rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .show-info {
@@ -56,12 +57,13 @@
   gap: 2px;
 }
 
-.show-local {
+.show-name {
   color: var(--color-text);
   font-size: 1.1rem;
+  font-style: italic;
 }
 
-.show-cidade {
+.show-local {
   color: var(--color-text-muted);
   font-size: 0.9rem;
   font-weight: 400;

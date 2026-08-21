@@ -38,15 +38,21 @@ function renderizarShows(shows, container) {
 
   container.innerHTML = shows.map(show => `
     <article class="show-card" data-status="${show.status}">
-      <div class="show-data">${formatarData(show.data)}</div>
+      <div class="show-data">${formatarData(show.data)}
+      <br>
+      ${show.hora}</div>
+      
       <div class="show-info">
-        <h3 class="show-local">${show.local}</h3>
-        <p class="show-cidade">${show.cidade}</p>
+      <h3 class="show-name">${show.evento}</h3>  
+      <p class="show-local">${show.local} // ${show.cidade}</p>
+        
       </div>
       <div class="show-acao">
+       ${!show.ingressoUrl===null ? `
         ${show.ingressoUrl
           ? `<a href="${show.ingressoUrl}" class="btn-ingresso" target="_blank" rel="noopener">Ingressos</a>`
           : `<span class="show-status-tag">${show.status}</span>`
+        } ` : `<span class="show-status-tag">${show.status}</span>`
         }
       </div>
     </article>
