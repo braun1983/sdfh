@@ -131,7 +131,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  border: 2px solid #a11;
+  border: 2px solid var(--color-accent);
   z-index: 2;
   pointer-events: none;
 }
@@ -232,6 +232,7 @@
 .hero__cta:focus-visible {
   outline: 2px solid #ffffff;
   outline-offset: 3px;
+  
 }
 
 .hero__cta-icon {
@@ -266,8 +267,8 @@
 
   .hero__status {
     font-size: 0.6rem;
-    left: 12px;
-    bottom: 12px;
+    left: 20px;
+    bottom: 18px;
   }
 
   .hero__logo-box {
