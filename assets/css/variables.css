@@ -1,5 +1,3 @@
-
-
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap");
 
 :root {
@@ -7,11 +5,11 @@
      CORES / COLORS
      ------------------------------------------------------------------------ */
 
-
   --color-primary: #050505;
   --color-secondary: #121212;
   --color-tertiary: #797676;
-   --color-quartenary: #fff;
+  --color-quartenary: #fff;
+
   /* Accent */
   --color-accent: #b20000;
   --color-accent-hover: #e00000;
@@ -19,11 +17,8 @@
   /* Texto */
   --color-text: #ffffff;
   --color-text-muted: #a0a0a0;
-  --color-text-glitch: #00fff0;
 
-  /* Superfícies / apoio (tons derivados do Obsidian Black para cards, borders, overlays) */
-  --color-surface: #0d0d0d;
-  
+  /* Superfícies / apoio */
   --color-border: #1f1f1f;
 
   /* Overlay / backdrop-blur headers */
@@ -33,31 +28,14 @@
      TIPOGRAFIA / TYPOGRAPHY
      ------------------------------------------------------------------------ */
 
-  /* Headlines */
   --font-heading: "Anton", sans-serif;
-
-  /* Meta-data / Labels (técnico) */
-  --font-mono: "Space Mono", "Roboto Mono", monospace;
-
-  /* Labels / UI técnica */
   --font-label: "Space Grotesk", sans-serif;
-
-  /* Corpo de texto (fallback, caso haja copy corrida no Manifesto) */
   --font-body: "JetBrains Mono", "Helvetica Neue", Arial, sans-serif;
 
   /* ------------------------------------------------------------------------
-     EFEITOS / MOTION
+     LAYOUT
      ------------------------------------------------------------------------ */
 
-  --transition-fast: 0.15s ease-out;
-  --transition-base: 0.3s ease-out;
-  --skew-angle: -8deg;
-
-  --blur-backdrop: 12px;
-
-  /* ------------------------------------------------------------------------
-     BREAKPOINTS (referência via custom media / uso manual em @media)
-     ------------------------------------------------------------------------ */
- --section-title-offset: 16px;
+  --section-title-offset: 16px;
   --section-padding-x: 3%;
 }
