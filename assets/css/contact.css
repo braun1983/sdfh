@@ -3,7 +3,7 @@
 .contact {
   background-color: var(--color-primary);
   border-top: 2px solid var(--color-border);
-  padding: 5% 0;
+  padding: 3% var(--section-padding-x);
 }
 
 .contact_title h2 {
@@ -11,9 +11,11 @@
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-size: 2rem;
-  letter-spacing: 3px;
-  margin-left: 100px;
-  margin-bottom: 40px;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin: 0 0 20px var(--section-title-offset);
+  border-left: 4px solid transparent;
+  padding-left: 12px;
 }
 
 .contact_container {
@@ -99,9 +101,5 @@
   .contact_action {
     justify-content: flex-start;
     margin-top: 10px;
-  }
-
-  .contact_title h2 {
-    margin-left: 20px;
   }
 }

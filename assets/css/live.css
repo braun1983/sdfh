@@ -1,12 +1,11 @@
 @import url("./variables.css");
 
-
 .lives {
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10% 0;
+  padding: 3% var(--section-padding-x);
   border-top: 2px solid var(--color-border);
 }
 
@@ -17,11 +16,13 @@
   font-size: 2rem;
   letter-spacing: 2px;
   display: inline-block;
-  margin-left: 20px;
+  margin: 0 0 20px var(--section-title-offset);
+  border-left: 4px solid transparent;
+  padding-left: 12px;
 }
 
 .show-list {
-  margin: 16px;
+  margin: 16px 0;
 }
 
 .show-card {
@@ -105,13 +106,12 @@
 /* ===== TABLET/DESKTOP (>= 640px): layout original em linha ===== */
 @media (min-width: 640px) {
   .lives_title h2 {
-    margin-left: 100px;
     font-size: 2rem;
     letter-spacing: 3px;
   }
 
   .show-list {
-    margin: 20px;
+    margin: 20px 0;
   }
 
   .show-card {

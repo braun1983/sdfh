@@ -6,26 +6,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  padding: 0 var(--section-padding-x);
 }
 
-.discography_title h2
- {
+.discography_title h2 {
   color: var(--color-text);
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 2px;
   display: inline-block;
-  margin-left: 20px ;
-  
+  margin: 20px 0 20px var(--section-title-offset);
+  border-left: 4px solid transparent;
+  padding-left: 12px;
 }
 
 .discography_cards_container {
   display: flex;
   gap: 14px;
   margin: 12px 0;
-  padding: 0 20px;
+  padding: 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -52,7 +52,6 @@
   scroll-snap-align: start;
 }
 
-/* iframe responsivo: ignora width/height fixos do HTML */
 .discography_miniature {
   padding: 6px;
   width: 100%;
@@ -81,28 +80,20 @@
   font-size: 0.85rem;
 }
 
-/* ===== TABLET (>= 600px): 2 por vez, ainda com scroll ===== */
+/* ===== TABLET (>= 600px) ===== */
 @media (min-width: 600px) {
   .discography_card {
     flex: 0 0 46%;
   }
 
-  .discography_title h2,
-  .discography > h2 {
-    margin-left: 40px;
+  .discography_title h2 {
     font-size: 1.75rem;
-  }
-
-  .discography_cards_container {
-    padding: 0 40px;
   }
 }
 
-/* ===== DESKTOP (>= 900px): layout original, tudo lado a lado, sem scroll ===== */
+/* ===== DESKTOP (>= 900px) ===== */
 @media (min-width: 900px) {
-  .discography_title h2,
-  .discography > h2 {
-    margin-left: 100px;
+  .discography_title h2 {
     font-size: 2rem;
     letter-spacing: 3px;
   }
@@ -111,7 +102,7 @@
     justify-content: space-around;
     overflow-x: visible;
     scroll-snap-type: none;
-    margin: 20px;
+    margin: 20px 0;
     padding: 0;
   }
 

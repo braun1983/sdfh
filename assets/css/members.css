@@ -1,53 +1,97 @@
-.members{
-      background-color: var(--color-secondary);
+@import url("./variables.css");
+
+.members {
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 3% 3% 3% 3%;
+  padding: 3% var(--section-padding-x);
 }
 
-.members_title h2{
+.members_title h2 {
   color: var(--color-text);
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 2px;
   display: inline-block;
-  margin-left: 20px ;
+  margin: 0 0 20px var(--section-title-offset);
+  border-left: 4px solid transparent;
+  padding-left: 12px;
 }
 
-.members_cards_container{
-    display:  flex;
-    justify-content: space-around;
-    
+.members_cards_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
 }
 
-.member_card{
-    background-color: var(--color-overlay);
-    padding: 10px;
-    border: 2px solid var(--color-border);
-    border-radius: 2px;
+.member_card {
+  background-color: var(--color-overlay);
+  padding: 10px;
+  border: 2px solid var(--color-border);
+  border-radius: 2px;
+  flex: 0 0 calc(50% - 7px);
+  text-align: center;
 }
 
-.member_photo img{
-    border: 2px solid var(--color-border);
-    border-radius: 2px;
-    width: 200px;
-    height: 200px;
+.member_photo img {
+  border: 2px solid var(--color-border);
+  border-radius: 2px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
-.member_info h3{
-    font-family: var(--font-label);
-    color: var(--color-accent);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 1rem;
-    margin-bottom: 2px;
+
+.member_info h3 {
+  font-family: var(--font-label);
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  margin-top: 10px;
 }
 
 .member_card p {
-    font-family: var(--font-body);
-    color: var(--color-text);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    margin-bottom: 2px;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+/* ===== TABLET (>= 600px) ===== */
+@media (min-width: 600px) {
+  .members_title h2 {
+    font-size: 1.75rem;
+  }
+
+  .member_card {
+    flex: 0 0 calc(33.333% - 10px);
+  }
+}
+
+/* ===== DESKTOP (>= 900px) ===== */
+@media (min-width: 900px) {
+  .members_title h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .members_cards_container {
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .member_card {
+    flex: 0 1 auto;
+  }
+
+  .member_photo img {
+    width: 200px;
+    height: 200px;
+  }
 }

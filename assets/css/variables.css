@@ -58,7 +58,6 @@
   /* ------------------------------------------------------------------------
      BREAKPOINTS (referência via custom media / uso manual em @media)
      ------------------------------------------------------------------------ */
-
-  --bp-mobile: 390px;
-  --bp-desktop: 1440px;
+ --section-title-offset: 16px;
+  --section-padding-x: 3%;
 }
